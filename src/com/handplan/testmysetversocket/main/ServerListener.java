@@ -35,6 +35,7 @@ public class ServerListener extends Thread {
 
 		} catch (IOException e) {
 			e.printStackTrace();
+			//ChatManager.getChatManager().remove(cs);
 		}
 	}
 	

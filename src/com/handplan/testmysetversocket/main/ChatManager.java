@@ -17,6 +17,10 @@ public class ChatManager {
 		
 	}
 	
+	public void remove(ChatSocket cs){
+		vector.remove(cs);
+	}
+	
 	//
 	public void publish(ChatSocket cs,String out) {
 		for (int i = 0; i < vector.size(); i++) {

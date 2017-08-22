@@ -23,7 +23,8 @@ public class ChatSocket extends Thread {
 		} catch (UnsupportedEncodingException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
-			e.printStackTrace();
+			//e.printStackTrace();
+			//ChatManager.getChatManager().remove(ChatSocket.this);
 		}
 	}
 
@@ -39,14 +40,17 @@ public class ChatSocket extends Thread {
 			while ((line = br.readLine()) != null) {
 				System.out.println(line);
 				ChatManager.getChatManager().publish(this, line);
-				if(!flag)
+			//	if(line.lastIndexOf(""))
+					
+		/*		if(!flag)
 				{ServerConManage.getCM().send(line);
-				flag=true;}			
+				flag=true;}			*/
 			}
 			br.close();
 			
 		} catch (UnsupportedEncodingException e) {
 			e.printStackTrace();
+			
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
