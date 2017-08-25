@@ -26,8 +26,8 @@ public class ServerListener extends Thread {
 				socket = serverSocket.accept();
 
 				//JOptionPane.showMessageDialog(null, "有用户连接8066端口");
-				
-				cs = new ChatSocket(socket);
+				System.out.println("connect");
+				cs = new ChatSocket(socket,ChatManager.getChatManager().vector);
 				cs.start();
 				ChatManager.getChatManager().add(cs);
 
